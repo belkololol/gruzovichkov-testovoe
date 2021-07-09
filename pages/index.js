@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Grid, makeStyles} from "@material-ui/core";
+import {Button, Grid, makeStyles} from "@material-ui/core";
 
 const styles = makeStyles({
     root: {
@@ -39,9 +39,9 @@ class Home extends React.Component {
         return (
             <div>
                 <Page data={data} isDynamic={this.state.isDynamic}/>
-                <button onClick={this.toggleDynamic}>
+                <Button onClick={this.toggleDynamic} variant="contained" color="primary">
                     Click
-                </button>
+                </Button>
             </div>
 
         )
@@ -51,7 +51,7 @@ class Home extends React.Component {
 
 function Page(props) {
     return <MyWonderfulComponent data={props.data} isDynamic={props.isDynamic}>
-        I'm text from a component
+        I&#39;m text from a component
     </MyWonderfulComponent>
 }
 
